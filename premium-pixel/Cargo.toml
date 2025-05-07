@@ -1,0 +1,11 @@
+[package]
+name = "premium-pixel"
+version = "0.1.0"
+edition = "2024"
+authors = ["Lukas Joeressen"]
+description = "Platform independent code for drawing to monochrome surfaces"
+license = "0BSD OR MIT OR Apache-2.0"
+repository = "https://github.com/kext/premium"
+categories = ["no-std", "embedded", "graphics"]
+
+[dependencies]
