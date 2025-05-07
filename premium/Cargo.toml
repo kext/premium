@@ -1,13 +1,16 @@
 [package]
 name = "premium"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Lukas Joeressen"]
 description = "Tools for drawing graphics to monochrome displays"
 license = "0BSD OR MIT OR Apache-2.0"
 repository = "https://github.com/kext/premium"
 categories = ["no-std", "embedded", "graphics"]
+keywords = ["premium", "pixel", "monochrome", "oled", "display"]
+readme = "../README.md"
 
 [dependencies]
 premium-pixel = { path = "../premium-pixel", version = "0.1" }
 premium-display = { path = "../premium-display", version = "0.1" }
+premium-line = { path = "../premium-line", version = "0.1" }
