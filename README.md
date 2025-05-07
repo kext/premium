@@ -16,6 +16,11 @@ Platform independent code for drawing to monochrome surfaces.
 
 Device drivers for different displays.
 
+### `premium-line`
+
+A `Line` is like a `String` but with a fixed capacity.
+Great for displaying dynamically formatted text on a display without needing a memory allocator.
+
 ## License
 
 Premium is licensed under either of

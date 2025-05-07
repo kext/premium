@@ -34,7 +34,7 @@ pub enum Error {
 }
 
 impl<const N: usize> Line<N> {
-    /// Create a new Line.
+    /// Create a new `Line`.
     pub const fn new() -> Self {
         assert!(N < 256);
         Self {
@@ -42,7 +42,7 @@ impl<const N: usize> Line<N> {
             len: 0,
         }
     }
-    /// Clear the line and set its length to 0.
+    /// Clear the `Line` and set its length to 0.
     pub fn clear(&mut self) {
         self.len = 0;
     }
@@ -52,7 +52,7 @@ impl<const N: usize> Line<N> {
     }
     /// Extracts a string slice containing the entire `Line`.
     pub fn as_str(&self) -> &str {
-        // Safety: We know the buffer is valid utf-8 up to len.
+        // Safety: We know the buffer is valid UTF-8 up to len.
         unsafe {
             core::str::from_utf8_unchecked(slice::from_raw_parts(
                 self.content.as_ptr().cast(),
@@ -62,7 +62,7 @@ impl<const N: usize> Line<N> {
     }
     /// Converts a `Line` into a mutable string slice.
     pub fn as_mut_str(&mut self) -> &mut str {
-        // Safety: We know the buffer is valid utf-8 up to len.
+        // Safety: We know the buffer is valid UTF-8 up to len.
         unsafe {
             core::str::from_utf8_unchecked_mut(slice::from_raw_parts_mut(
                 self.content.as_mut_ptr().cast(),
